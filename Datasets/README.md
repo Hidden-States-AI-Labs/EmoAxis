@@ -1,8 +1,3 @@
-Perfect — below is the **corrected and final `README.md`**, with the **EmoPillars citation updated** to the **context-less full version** you actually used.
-Everything else remains unchanged and publication-ready.
-
----
-
 # Datasets
 
 This directory contains the datasets used in this project for **multi-label emotion classification**. All datasets have been **preprocessed and standardized** to ensure consistency, reproducibility, and seamless integration with transformer-based deep learning models.

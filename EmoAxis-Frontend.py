@@ -27,7 +27,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # DOWNLOAD MODEL CHECKPOINT
 CKPT_PATH = hf_hub_download(
-    repo_id="arnab04/roberta-base-go-emotions",
+    repo_id="Hidden-States/roberta-base-go-emotions",
     filename="model.pt"
 )
 
@@ -119,7 +119,7 @@ def voice_input():
 # APP HEADER
 
 st.title("EmoAxis — Multi-label Emotion Prediction")
-st.write("#### By: Arnab, Subinoy & Priyanshu\n")
+st.write("#### By: Arnab & Subinoy\n")
 st.markdown("---")
 
 with st.spinner("Loading models..."):
@@ -271,4 +271,5 @@ if predict_btn:
                         texttemplate="%{label}<br>%{value:.1f}%",
                         hoverinfo="skip"
                     )
+
                     st.plotly_chart(fig1)

@@ -6,7 +6,8 @@ Folder name: **PT-Model-Evaluate**
 ***O/W, you can use `AutoModel` from `transformers` to load the model and test it on your own data***  
 Folder name: **AutoModel-Evaluate**
 
-For AutoModel: from `transformers` additionally import `logging as transformers_logging`  
+For AutoModel: use 'trust_remote_code = True' in 'AutoModel.from_pretrained' for our custom roberta architecture
+from `transformers` additionally import `logging as transformers_logging`  
 and use  
 `transformers_logging.set_verbosity_error()`  
 

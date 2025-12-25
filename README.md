@@ -1,15 +1,31 @@
 # README
 
-***Follow the `.pt` file access & evaluate code to use the `.pt` model***  
-Folder name: **PT-Model-Evaluate**
+## Model Evaluation Options
 
-***O/W, you can use `AutoModel` from `transformers` to load the model and test it on your own data***  
-Folder name: **AutoModel-Evaluate**
+You can evaluate the model using **either** of the following approaches:
 
-For AutoModel: use 'trust_remote_code = True' in 'AutoModel.from_pretrained' for our custom roberta architecture
-from `transformers` additionally import `logging as transformers_logging`  
-and use  
-`transformers_logging.set_verbosity_error()`  
+---
 
-to avoid unnecessary warnings while downloading the custom model from Hugging Face  
-(optional, but you'll get a clean output cell)
+### 1. Using the `.pt` Model File
+
+Follow the provided code for accessing and evaluating the `.pt` model.
+
+* **Folder:** `PT-Model-Evaluate`
+
+This option is recommended if you already have the exported PyTorch model file and want direct control over loading and evaluation.
+
+---
+
+### 2. Using `AutoModel` from 🤗 Transformers
+
+Alternatively, you can load the model directly from Hugging Face using `AutoModel` and test it on your own data.
+
+* **Folder:** `AutoModel-Evaluate`
+
+#### Important Notes
+
+* Use `trust_remote_code=True` in `AutoModel.from_pretrained` to support the custom **RoBERTa-based architecture**.
+* To avoid unnecessary warnings during model download, you can suppress Transformers logs.
+
+
+

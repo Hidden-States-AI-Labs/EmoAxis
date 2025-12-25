@@ -9,7 +9,7 @@ This directory contains the datasets used in this project for **multi-label emot
 The following benchmark emotion datasets are included:
 
 * **GoEmotions**
-* **EmoPillars (Context-less, Full Version)**
+* **EmoPillars (Context-less)**
 
 Each dataset is organized into the following splits:
 
@@ -100,7 +100,7 @@ This mapping is **consistent across GoEmotions and EmoPillars** and applies to a
 * Labels are represented using **multi-one-hot vectors**
 * Each row may have **multiple active emotion labels**
 * The label space dimensionality is fixed at **28 emotions**
-* The encoding is compatible with common multi-label loss functions (e.g., Binary Cross-Entropy)
+* The encoding is compatible with common multi-label loss functions
 
 ---
 

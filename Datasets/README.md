@@ -10,6 +10,7 @@ The following benchmark emotion datasets are included:
 
 * **GoEmotions**
 * **EmoPillars (Context-less)**
+* **Sem-Eval (2018 Task 1: Affect in Tweets)**
 
 Each dataset is organized into the following splits:
 
@@ -59,8 +60,9 @@ This structure supports **multi-label classification**, allowing a single text i
 
 ## 🏷️ Emotion Label Mapping
 
-The column indices (`0–27`) correspond to the following emotion categories.
-This mapping is **consistent across GoEmotions and EmoPillars** and applies to all dataset splits.
+The column indices (`0–27`) correspond to the following emotion categories. This mapping is **consistent across GoEmotions, EmoPillars, and Sem-Eval** and applies to all dataset splits.
+
+### **GoEmotions & EmoPillars (28 Emotions)**
 
 | Index | Emotion        |
 | ----: | -------------- |
@@ -93,14 +95,32 @@ This mapping is **consistent across GoEmotions and EmoPillars** and applies to a
 |    26 | Surprise       |
 |    27 | Neutral        |
 
+### **Sem-Eval (11 Emotions)**
+
+| Index | Emotion      |
+| ----: | ------------ |
+|     0 | Anger        |
+|     1 | Anticipation |
+|     2 | Disgust      |
+|     3 | Fear         |
+|     4 | Joy          |
+|     5 | Love         |
+|     6 | Optimism     |
+|     7 | Pessimism    |
+|     8 | Sadness      |
+|     9 | Surprise     |
+|    10 | Trust        |
+
 ---
 
 ## 🧠 Label Encoding Scheme
 
 * Labels are represented using **multi-one-hot vectors**
 * Each row may have **multiple active emotion labels**
-* The label space dimensionality is fixed at **28 emotions**
-* The encoding is compatible with common multi-label loss functions
+* The label space dimensionality is fixed at **28 emotions** for GoEmotions and EmoPillars, and **11 emotions** for Sem-Eval.
+* The encoding is compatible with common multi-label loss functions.
+
+  * For Sem-Eval, any missing emotions (those not present in the 11-class set) are represented as **absent (0)** in the binary encoding, ensuring consistency with the 28-class structure.
 
 ---
 
@@ -136,7 +156,7 @@ Demszky, D., Movshovitz-Attias, D., Ko, J., Cowen, A., Nemade, G., & Ravi, S. (2
 
 ---
 
-### EmoPillars (Context-less, Full Version)
+### EmoPillars (Context-less)
 
 Shvets, A. (2025).
 **Emo Pillars: Knowledge Distillation to Support Fine-Grained Context-Aware and Context-Less Emotion Classification.**
@@ -156,11 +176,27 @@ Shvets, A. (2025).
 
 ---
 
+### Sem-Eval (2018 Task 1: Affect in Tweets)
+
+Mohammad, S. M., Bravo-Marquez, F., Salameh, M., & Kiritchenko, S. (2018).
+SemEval-2018 Task 1: Affect in Tweets.
+Proceedings of the International Workshop on Semantic Evaluation (SemEval-2018).
+
+```bibtex
+@inproceedings{SemEval2018Task1,
+  author    = {Mohammad, Saif M. and Bravo-Marquez, Felipe and Salameh, Mohammad and Kiritchenko, Svetlana},
+  title     = {SemEval-2018 {T}ask 1: {A}ffect in Tweets},
+  booktitle = {Proceedings of International Workshop on Semantic Evaluation (SemEval-2018)},
+  address   = {New Orleans, LA, USA},
+  year      = {2018}
+}
+```
+
+---
+
 ## ⚠️ Notes
 
-* Only **preprocessed** versions of the datasets are included
-* Raw datasets are not provided in this directory
-* Tokenization and model-specific input formatting should be applied downstream
-* Any dataset-specific constraints or extensions should be documented at the experiment level
-
+* Only **preprocessed** versions of the datasets are included.
+* Raw datasets are not provided in this directory.
+* Refer to the Preprocessing/ folder for the full implementation of the preprocessing pipeline and dataset standardization steps.
 ---

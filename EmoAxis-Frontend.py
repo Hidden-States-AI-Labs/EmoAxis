@@ -20,7 +20,7 @@ st.set_page_config(
 # CONFIGURATION 
 MAX_LEN = 128
 DEFAULT_TOPK = 5
-MODEL_ID = "Hidden-States/roberta-base-go-emotions"
+MODEL_ID = "Hidden-States/roberta-base-goemotions"
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
@@ -214,4 +214,5 @@ if predict_btn:
                         texttemplate="%{label}<br>%{value:.1f}%",
                         hoverinfo="skip"
                     )
+
                     st.plotly_chart(fig1)

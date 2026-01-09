@@ -2,11 +2,20 @@
 
 You can evaluate the model using either of the following approaches.
 
-## Using `AutoModel` from 🤗 Transformers
+## 1. Using `AutoModel` from  Transformers
 
 The model can be loaded directly from Hugging Face using `AutoModel` and evaluated on your own data.
 
 **Folder:** `Model-Evaluate`
+
+### 2. Using the `.pt` Model File
+
+Alternatively, follow the provided code for accessing and evaluating the `.pt` model.
+
+**Folder:** `PT-Model-Evaluate`
+
+This option is recommended if you already have the exported PyTorch model file and want direct control over loading and evaluation.
+
 
 ### Important Notes
 

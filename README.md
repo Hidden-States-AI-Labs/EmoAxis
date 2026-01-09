@@ -2,7 +2,7 @@
 
 You can evaluate the model using either of the following approaches.
 
-## 1. Using `AutoModel` from 🤗 Transformers
+## Using `AutoModel` from 🤗 Transformers
 
 The model can be loaded directly from Hugging Face using `AutoModel` and evaluated on your own data.
 

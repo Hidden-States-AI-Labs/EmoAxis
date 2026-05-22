@@ -15,7 +15,7 @@ The model can be loaded directly from Hugging Face using `AutoModel` and evaluat
 
 Alternatively, follow the provided code for accessing and evaluating the `.pt` model.
 
-**Folder:** `PT-Model-Evaluate`
+**Folder:** `Model-Evaluate/PT-Model-Evaluate`
 
 This option is recommended if you already have the exported PyTorch model file and want direct control over loading and evaluation.
 
